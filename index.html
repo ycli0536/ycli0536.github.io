@@ -5,16 +5,65 @@
     <link rel="icon" type="image/svg+xml" href="/images/EMAGE_hat-01.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Yinchu Li - PhD Candidate in Marine Geophysics at Georgia Institute of Technology. Specializing in electromagnetic geophysics and fluid-tectonic interactions in subduction zones using controlled-source electromagnetic (CSEM) methods." />
+    <script>
+      (function () {
+        try {
+          var storageKey = "vite-ui-theme";
+          var stored = localStorage.getItem(storageKey);
+          var theme = stored || "dark";
+          if (theme === "system") {
+            var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            theme = prefersDark ? "dark" : "light";
+          }
+          var root = document.documentElement;
+          root.classList.remove("light", "dark");
+          root.classList.add(theme);
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/peakpx_1280-CxWvNAzV.webp"
+      imagesrcset="/assets/peakpx_1280-CxWvNAzV.webp 1x, /assets/peakpx_1080-C0IEHmqE.webp 2x"
+      type="image/webp"
+      media="(prefers-color-scheme: dark) and (orientation: landscape)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/vertical_640-RGN_-GgW.webp"
+      imagesrcset="/assets/vertical_640-RGN_-GgW.webp 1x, /assets/vertical-DOi-NlVp.webp 2x"
+      type="image/webp"
+      media="(prefers-color-scheme: dark) and (orientation: portrait)"
+    />
     <title>Yinchu Li</title>
-    <script type="module" crossorigin src="/assets/index-BIZAVJt3.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Ce-CZFPk.css">
+    <script type="module" crossorigin src="/assets/index-B8W0-yU4.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-9nnfMaOo.css">
   </head>
   <body>
     <div id="root"></div>
     
-    <!-- GoatCounter Analytics -->
-    <script data-goatcounter="https://yli3354.goatcounter.com/count"
-            data-goatcounter-settings='{"allow_local": false}'
-            async src="//gc.zgo.at/count.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        var loadGoatCounter = function () {
+          var script = document.createElement("script");
+          script.async = true;
+          script.src = "https://gc.zgo.at/count.js";
+          script.setAttribute("data-goatcounter", "https://yli3354.goatcounter.com/count");
+          script.setAttribute("data-goatcounter-settings", "{\"allow_local\": false}");
+          document.body.appendChild(script);
+        };
+
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(loadGoatCounter, { timeout: 2000 });
+        } else {
+          setTimeout(loadGoatCounter, 2000);
+        }
+      });
+    </script>
   </body>
 </html>
