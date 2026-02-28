@@ -28,13 +28,18 @@
 
     <meta name="google-site-verification" content="g5mmCgg9mSaktLu8rgZf-ejKrNMaDNyTMpO3IWO1lJE" />
 
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9F6W9QP3NN"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-9F6W9QP3NN");
+      if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-9F6W9QP3NN";
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-9F6W9QP3NN");
+      }
     </script>
 
     <!-- Preconnect to Google Fonts and CDN for better performance -->
@@ -79,7 +84,7 @@
       type="image/webp"
       media="(prefers-color-scheme: dark) and (orientation: portrait)"
     />
-    <script type="module" crossorigin src="/assets/index-Bp6KeaOJ.js"></script>
+    <script type="module" crossorigin src="/assets/index-Cm2oXpP1.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-oqH30qRf.css">
   </head>
   <body>
